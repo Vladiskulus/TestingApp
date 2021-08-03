@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TestingApp</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="fcm_message">FCM Message</string>
+    <string name="git_hub_users">Git hub userModels</string>
+    <string name="repositories">Repositories</string>
+    <string name="user_does_not_have_repositories">%1$s does not have repositories</string>
+    <string name="user_list_is_empty">Local userModel list is empty\nRestart app with enabled Internet</string>
+</resources>

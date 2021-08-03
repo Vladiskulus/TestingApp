@@ -1,0 +1,20 @@
+package com.vn.iambulance.testingapp.db;
+
+import java.io.IOException;
+import okhttp3.*;
+
+public class Auth implements Interceptor {
+
+    private String credentials;
+
+    public Auth(String user, String password) {
+        this.credentials = Credentials.basic(user, password);
+    }
+    @Override
+    public Response intercept(Interceptor.Chain chain) throws IOException {
+        Request request = chain.request();
+        Request authenticatedRequest = request.newBuilder()
+                .header("Authorization", credentials).build();
+        return chain.proceed(authenticatedRequest);
+    }
+}
